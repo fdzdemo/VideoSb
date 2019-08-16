@@ -45,7 +45,11 @@ public class BackgroundCourseController {
 //		req.getRequestDispatcher("/background/BackgroundCourseShow.jsp").forward(req, resp);
 		return "/background/BackgroundCourseShow";
 	}
-	@RequestMapping("background/addCourse.do")
+	@RequestMapping("addCourseShow.do")
+	public String addCaouseShow() {
+		return "/background/BackgroundCourseAdd";
+	}
+	@RequestMapping("addCourse.do")
 	public void addCourse(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException{
 		req.setCharacterEncoding("UTF-8");
 		String course_title =req.getParameter("course_title");
@@ -53,7 +57,7 @@ public class BackgroundCourseController {
 		String subject_id=req.getParameter("subject_id");
 		Course course =new Course(course_title,course_desc,Integer.valueOf(subject_id));
 		courseService.add(course);
-		this.showCourseH(req,resp);
+		resp.sendRedirect("showCourseH.do");
 	}
 	
 	@RequestMapping("courseDeleteAll.do")

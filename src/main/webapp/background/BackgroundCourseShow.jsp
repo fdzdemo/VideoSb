@@ -138,7 +138,8 @@ th {
 			$("#ids").val(ids);
 		}
 		function showAddPage() {
-			location.href = "http://localhost:8080/background/BackgroundCourseAdd.jsp";
+//			location.href = "http://localhost:8080/VideoSb/background/BackgroundCourseAdd.jsp";
+			location.href = "addCourseShow.do";
 		}
 		function delCourseById(Obj, id, title) {
 
