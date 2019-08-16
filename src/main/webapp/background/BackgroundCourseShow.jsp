@@ -36,9 +36,9 @@ th {
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-9">
 				<ul class="nav navbar-nav">
-					<li><a href="http://localhost:8080/videoShow.do">视频管理</a></li>
-					<li class="active"> <a href="http://localhost:8080/speakerShow.do">主讲人管理</a></li>
-					<li ><a href="http://localhost:8080/showCourseH.do">课程管理</a></li>
+					<li><a href="http://localhost:8080/VideoSb/videoShow.do">视频管理</a></li>
+					<li class="active"> <a href="http://localhost:8080/VideoSb/speakerShow.do">主讲人管理</a></li>
+					<li ><a href="http://localhost:8080/VideoSb/showCourseH.do">课程管理</a></li>
 				</ul>
 				<p class="navbar-text navbar-right">
 					<span>${admin.accounts}</span> <i
