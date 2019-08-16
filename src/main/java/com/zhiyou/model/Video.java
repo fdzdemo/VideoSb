@@ -3,13 +3,42 @@ package com.zhiyou.model;
 public class Video {
 	private int video_id;
 	private String title;
-	private String detail;
+	private String detail; 
 	private int time;
 	private int speaker_id;
 	private int course_id;
 	private String video_url;
 	private String image_url;
 	private int play_num;
+	private Speaker speaker;
+	private Course  course;
+	public Video(int video_id, String title, String detail, int time, int speaker_id, int course_id, String video_url,
+			String image_url, int play_num, Speaker speaker, Course course) {
+		super();
+		this.video_id = video_id;
+		this.title = title;
+		this.detail = detail;
+		this.time = time;
+		this.speaker_id = speaker_id;
+		this.course_id = course_id;
+		this.video_url = video_url;
+		this.image_url = image_url;
+		this.play_num = play_num;
+		this.speaker = speaker;
+		this.course = course;
+	}
+	public Speaker getSpeaker() {
+		return speaker;
+	}
+	public void setSpeaker(Speaker speaker) {
+		this.speaker = speaker;
+	}
+	public Course getCourse() {
+		return course;
+	}
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 	public int getVideo_id() {
 		return video_id;
 	}

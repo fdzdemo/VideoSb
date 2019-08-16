@@ -13,10 +13,10 @@
 <meta name="description"
 	content="智游教育在线课程视频,为您提供java,python,HTML5,UI,PHP,大数据等学科经典视频教程在线浏览学习,精细化知识点解析,深入浅出,想学不会都难,智游教育,学习成就梦想！">
 
-<link rel="stylesheet" href="/VideoSSM/static/z/base.css">
-<link rel="stylesheet" href="/VideoSSM/static/z/css.css">
+<link rel="stylesheet" href="/VideoSb/static/z/base.css">
+<link rel="stylesheet" href="/VideoSb/static/z/css.css">
 <link rel="icon"
-	href="http://localhost:8080/VideoSSM/static/z/favicon.png"
+	href="http://localhost:8080/VideoSb/static/z/favicon.png"
 	type="image/png">
 
 <title>在线公开课-智游教育|java|大数据|HTML5|python|UI|PHP视频教程</title>
@@ -36,25 +36,25 @@
 
 			<c:if test="${empty user.accounts }">
 				<div id="userBlock" style="float: right">
-					<a id="loginLink"><img src="/VideoSSM/static/z/we.png"
+					<a id="loginLink"><img src="/VideoSb/static/z/we.png"
 						draggable="false">登录</a> <a id="regLink"><img
-						src="/VideoSSM/static/z/we.png" draggable="false">注册</a>
+						src="/VideoSb/static/z/we.png" draggable="false">注册</a>
 				</div>
 			</c:if>
 
 			<c:if test="${not empty user.accounts  }">
 				<div id="userAccount" style="float: right">
-					<a href="/VideoSSM/loginOut.do">退出</a> <a
-						href="/VideoSSM/foreground/PersonalCenter.jsp">
+					<a href="/VideoSb/loginOut.do">退出</a> <a
+						href="/VideoSb/foreground/PersonalCenter.jsp">
 						${user.accounts}</a>
 				</div>
 			</c:if>
 
 			<a onclick="JavaScript:addFavorite2()"><img
-				src="/VideoSSM/static/z/sc.png" draggable="false">加入收藏</a> <a
-				id="adminLoginLink"> <img src="/VideoSSM/static/z/we.png"
+				src="/VideoSb/static/z/sc.png" draggable="false">加入收藏</a> <a
+				id="adminLoginLink"> <img src="/VideoSb/static/z/we.png"
 				draggable="false">后台管理
-			</a> <a class="color_e4"><img src="/VideoSSM/static/z/phone.png"
+			</a> <a class="color_e4"><img src="/VideoSb/static/z/phone.png"
 				draggable="false"> 0371-88888598 4006-371-555</a>
 
 		</div>
@@ -64,7 +64,7 @@
 
 	<!--banner图-->
 	<div class="banner index-banner">
-		<img alt="" src="/VideoSSM/static/z/banner-2.jpg">
+		<img alt="" src="/VideoSb/static/z/banner-2.jpg">
 	</div>
 
 
@@ -77,67 +77,67 @@
 					<tbody>
 						<tr>
 							<td colspan="2"><a
-								href="/VideoSSM/courseWithVideoAndSubject.do?subjectId=1"> <img
-									src="/VideoSSM/static/z/html5.jpg" alt="" class="image scale"
+								href="/VideoSb/courseWithVideoAndSubject.do?subjectId=1"> <img
+									src="/VideoSb/static/z/html5.jpg" alt="" class="image scale"
 									draggable="false">
 									<div class="headline">
-										<span>Web前端教程</span> <img src="/VideoSSM/static/z/arrow.png"
+										<span>Web前端教程</span> <img src="/VideoSb/static/z/arrow.png"
 											alt="">
 									</div>
 							</a></td>
 							<td>
 								<!--上线时修改id--> <a
-								href="/VideoSSM/courseWithVideoAndSubject.do?subjectId=6"> <img
-									src="/VideoSSM/static/z/ui.jpg" alt="" class="image scale"
+								href="/VideoSb/courseWithVideoAndSubject.do?subjectId=6"> <img
+									src="/VideoSb/static/z/ui.jpg" alt="" class="image scale"
 									draggable="false">
 									<div class="headline">
-										<span>UI设计教程</span> <img src="/VideoSSM/static/z/arrow.png"
+										<span>UI设计教程</span> <img src="/VideoSb/static/z/arrow.png"
 											alt="">
 									</div>
 							</a>
 							</td>
 							<td rowspan="2" class="one_three"><a class="opacity5"
-								href="/VideoSSM/courseWithVideoAndSubject.do?subjectId=2"> <img
-									src="/VideoSSM/static/z/java.jpg" alt="" class="image "
+								href="/VideoSb/courseWithVideoAndSubject.do?subjectId=2"> <img
+									src="/VideoSb/static/z/java.jpg" alt="" class="image "
 									draggable="false">
 									<div class="headline">
-										<span>Java教程</span> <img src="/VideoSSM/static/z/arrow.png"
+										<span>Java教程</span> <img src="/VideoSb/static/z/arrow.png"
 											alt="">
 									</div>
 							</a></td>
 						</tr>
 						<tr>
 							<td><a class="opacity5"
-								href="/VideoSSM/courseWithVideoAndSubject.do?subjectId=5"> <img
-									src="/VideoSSM/static/z/bigdata.jpg" alt="" class="image"
+								href="/VideoSb/courseWithVideoAndSubject.do?subjectId=5"> <img
+									src="/VideoSb/static/z/bigdata.jpg" alt="" class="image"
 									draggable="false">
 									<div class="headline">
-										<span>大数据教程</span> <img src="/VideoSSM/static/z/arrow.png"
+										<span>大数据教程</span> <img src="/VideoSb/static/z/arrow.png"
 											alt="">
 									</div>
 							</a></td>
 							<td colspan="2"><a
-								href="/VideoSSM/courseWithVideoAndSubject.do?subjectId=10">
-									<img src="/VideoSSM/static/z/python.jpg" alt=""
+								href="/VideoSb/courseWithVideoAndSubject.do?subjectId=10">
+									<img src="/VideoSb/static/z/python.jpg" alt=""
 									class="image scale" draggable="false">
 									<div class="headline">
-										<span>Python教程</span> <img src="/VideoSSM/static/z/arrow.png"
+										<span>Python教程</span> <img src="/VideoSb/static/z/arrow.png"
 											alt="">
 									</div>
 							</a></td>
 						</tr>
 						<tr>
 							<td colspan="2"><a
-								href="/VideoSSM/courseWithVideoAndSubject.do?subjectId=11">
-									<img src="/VideoSSM/static/z/php.jpg" alt=""
+								href="/VideoSb/courseWithVideoAndSubject.do?subjectId=11">
+									<img src="/VideoSb/static/z/php.jpg" alt=""
 									class="image scale" draggable="false">
 									<div class="headline">
-										<span>PHP教程</span> <img src="/VideoSSM/static/z/arrow.png"
+										<span>PHP教程</span> <img src="/VideoSb/static/z/arrow.png"
 											alt="">
 									</div>
 							</a></td>
 							<td colspan="2" class="three_two"><img
-								src="/VideoSSM/static/z/qidai.jpg" alt="" class="image"
+								src="/VideoSb/static/z/qidai.jpg" alt="" class="image"
 								draggable="false">
 								<div class="headline">更多课程，敬请期待...</div></td>
 						</tr>
@@ -191,7 +191,7 @@
 	<!--页脚-->
 	<footer>
 		<ul>
-			<li><img src="/VideoSSM/static/z/footer_logo.png" alt=""
+			<li><img src="/VideoSb/static/z/footer_logo.png" alt=""
 				draggable="false"></li>
 			<li class="mt25">
 				<h3>各校区地址</h3>
@@ -216,9 +216,9 @@
 					<li>电话:4006-371-555 0371-88888598</li>
 					<li class="erwei"><br>
 						<div>
-							<img class="weixin" src="/VideoSSM/static/z/a_002.png" alt=""
+							<img class="weixin" src="/VideoSb/static/z/a_002.png" alt=""
 								draggable="false"> <img class="weibo"
-								src="/VideoSSM/static/z/a.png" alt="" draggable="false">
+								src="/VideoSb/static/z/a.png" alt="" draggable="false">
 						</div></li>
 				</ul>
 			</li>
@@ -231,7 +231,7 @@
 	<div class="mask hidden" id="login">
 		<div class="mask_content">
 			<div class="mask_content_header">
-				<img src="/VideoSSM/static/z/logo.png" alt="" class="ma">
+				<img src="/VideoSb/static/z/logo.png" alt="" class="ma">
 			</div>
 			<div class="mask_content_body">
 				<form id="loginForm" action="">
@@ -256,14 +256,14 @@
 	<div class="mask hidden" id="adminLogin">
 		<div class="mask_content">
 			<div class="mask_content_header">
-				<img src="/VideoSSM/static/z/logo.png" alt="" class="ma">
+				<img src="/VideoSb/static/z/logo.png" alt="" class="ma">
 			</div>
 			<div class="mask_content_body">
 				<form id="AdminLoginForm" action="adminLogin.do" method="post">
 					<h3>管理员登录</h3>
 					<input id="loginAccounts" placeholder="请输入管理员账户" name="accounts"
 						type="text"
-						style="width: 100%; margin: 15px 0; padding: 0 10px 0 50px; border: 1px solid #bac0ce; background-image: url(/VideoSSM/static/z/user.png); background-repeat: no-repeat; background-position: 8px center;">
+						style="width: 100%; margin: 15px 0; padding: 0 10px 0 50px; border: 1px solid #bac0ce; background-image: url(/VideoSb/static/z/user.png); background-repeat: no-repeat; background-position: 8px center;">
 
 					<input id="loginAccountsPassword" placeholder="请输入密码"
 						name="accountsPassword" type="password">
@@ -286,7 +286,7 @@
 	<div class="mask hidden" id="reg">
 		<div class="mask_content">
 			<div class="mask_content_header">
-				<img src="/VideoSSM/static/z/logo.png" alt="" class="ma">
+				<img src="/VideoSb/static/z/logo.png" alt="" class="ma">
 			</div>
 			<div class="mask_content_body">
 				<form id="regForm"
@@ -319,11 +319,11 @@
 
 
 
-	<script src="/VideoSSM/static/z/jquery-1.js"></script>
-	<script src="/VideoSSM/static/z/gVerify.js"></script>
-	<script src="/VideoSSM/static/z/index.js"></script>
+	<script src="/VideoSb/static/z/jquery-1.js"></script>
+	<script src="/VideoSb/static/z/gVerify.js"></script>
+	<script src="/VideoSb/static/z/index.js"></script>
 
-	<script type="text/javascript" src="/VideoSSM/js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="/VideoSb/js/jquery-3.4.1.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#loginLink").click(function() {
