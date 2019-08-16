@@ -90,7 +90,6 @@ public class BackgroundVideoController {
 	@RequestMapping("/videoUpdateShow.do")
 	public String speakerUpdateShow(int id,HttpServletRequest req) {
 		Video video = videoService.selectById(id);
-		System.out.println(video);
 		List<Speaker> speaker = speakerService.selectAll();
 		List<Course>  course = courseService.selectAll();
 		req.setAttribute("speaker", speaker);

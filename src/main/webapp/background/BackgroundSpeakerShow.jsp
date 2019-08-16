@@ -130,7 +130,8 @@ th {
 			$("#ids").val(ids);
 		}
 		function showAddPage() {
-			location.href = "http://localhost:8080/background/BackgroundSpeakerAdd.jsp";
+//			location.href = "http://localhost:8080/background/BackgroundSpeakerAdd.jsp";
+			location.href = "addSpeakerShow.do";
 		}
 		
 		function delSpeakerById(Obj, id, title) {

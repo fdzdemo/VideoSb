@@ -43,8 +43,11 @@ public class BackgroundSpeakerController {
 		}
 
 	}
-
-	@RequestMapping("/background/speakerAdd.do")
+	@RequestMapping("addSpeakerShow.do")
+	public String addSpeakerShow() {
+		return "/background/BackgroundSpeakerAdd";
+	}
+	@RequestMapping("speakerAdd.do")
 	public String speakerAdd(Speaker speaker) {
 		speakerService.add(speaker);
 		

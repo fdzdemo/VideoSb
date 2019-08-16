@@ -10,7 +10,7 @@ import com.zhiyou.dao.s.BackgroundVideoDao;
 import com.zhiyou.model.Video;
 import com.zhiyou.service.s.BackgroundVideoService;
 
-;
+
 @Service
 public class BackgroundVideoServiceImpl implements BackgroundVideoService{
 
