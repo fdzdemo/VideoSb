@@ -16,7 +16,7 @@
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 <title>智游教育</title>
 
-<link href="/VideoSSM/static/z/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/VideoSb/static/z/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 <style type="text/css">
 .col-md-1 {
@@ -53,10 +53,9 @@ b {
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-9">
 				<ul class="nav navbar-nav">
-					<li><a href="/VideoSSM/videoShow.do">视频管理</a></li>
-					<li class="active"><a href="/VideoSSM/speakerShow.do">主讲人管理</a></li>
-					<li><a href="/VideoSSM/speakerShow.do">课程管理
-						</a></li>
+					<li><a href="http://localhost:8080/videoShow.do">视频管理</a></li>
+					<li class="active"> <a href="http://localhost:8080/speakerShow.do">主讲人管理</a></li>
+					<li ><a href="http://localhost:8080/showCourseH.do">课程管理</a></li>
 				</ul>
 				<p class="navbar-text navbar-right">
 					<span>${admin.accounts}</span> <i class="glyphicon glyphicon-log-in"
@@ -86,7 +85,7 @@ b {
 
 	<div class="container" style="margin-top: 20px;">
 
-		<form id="infoForm" class="form-horizontal" action="/VideoSSM/speakerUpdate.do">
+		<form id="infoForm" class="form-horizontal" action="speakerUpdate.do">
 
 			<input name="id" value="${speaker.id }" type="hidden">
 
@@ -95,29 +94,29 @@ b {
 				<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">姓名</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="speakerName" id="speakerName"
-						value="${speaker.speakerName }" type="text">
+					<input class="form-control" name="speaker_name" id="speakerName"
+						value="${speaker.speaker_name }" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">职位</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="speakerJob"  id="speakerJob"
-						value="${speaker.speakerJob }" type="text">
+					<input class="form-control" name="speaker_job"  id="speakerJob"
+						value="${speaker.speaker_job }" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">头像地址</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="picUrl" id="picUrl"
-						value="${speaker.picUrl }" type="text">
+					<input class="form-control" name="pic_url" id="picUrl"
+						value="${speaker.pic_url }" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">简介</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="speakerDesc" id="speakerDesc"
-						value="${speaker.speakerDesc }" type="text">
+					<input class="form-control" name="speaker_desc" id="speakerDesc"
+						value="${speaker.speaker_desc }" type="text">
 				</div>
 			</div>
 			<div class="form-group">
@@ -133,11 +132,11 @@ b {
 <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-	<script src="/VideoSSM/static/js/jquery-1.js"></script>
-	<script src="/VideoSSM/static/js/bootstrap.js"></script>
-	<script src="/VideoSSM/static/js/confirm.js"></script>
-	<script src="/VideoSSM/static/js/jquery.js"></script>
-	<script src="/VideoSSM/static/js/message_cn.js"></script>
+	<script src="/VideoSb/static/js/jquery-1.js"></script>
+	<script src="/VideoSb/static/js/bootstrap.js"></script>
+	<script src="/VideoSb/static/js/confirm.js"></script>
+	<script src="/VideoSb/static/js/jquery.js"></script>
+	<script src="/VideoSb/static/js/message_cn.js"></script>
 
 
 

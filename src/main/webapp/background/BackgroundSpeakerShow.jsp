@@ -10,13 +10,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>智游教育</title>
 
-<link href="/VideoSSM/static/z/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/VideoSb/static/z/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-<script src="/VideoSSM/static/js/jquery-1.js"></script>
-<script src="/VideoSSM/static/js/bootstrap.js"></script>
-<script src="/VideoSSM/static/js/confirm.js"></script>
-<script src="/VideoSSM/static/js/jquery.js"></script>
-<script src="/VideoSSM/static/js/message_cn.js"></script>
+<script src="/VideoSb/static/js/jquery-1.js"></script>
+<script src="/VideoSb/static/js/bootstrap.js"></script>
+<script src="/VideoSb/static/js/confirm.js"></script>
+<script src="/VideoSb/static/js/jquery.js"></script>
+<script src="/VideoSb/static/js/message_cn.js"></script>
 
 <style type="text/css">
 th {
@@ -36,9 +36,9 @@ th {
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-9">
 				<ul class="nav navbar-nav">
-					<li><a href="/VideoSSM/videoShow.do">视频管理</a></li>
-					<li class="active"> <a href="/VideoSSM/speakerShow.do">主讲人管理</a></li>
-					<li ><a href="/VideoSSM/courseShow.do">课程管理</a></li>
+					<li><a href="http://localhost:8080/videoShow.do">视频管理</a></li>
+					<li class="active"> <a href="http://localhost:8080/speakerShow.do">主讲人管理</a></li>
+					<li ><a href="http://localhost:8080/showCourseH.do">课程管理</a></li>>
 				</ul>
 				<p class="navbar-text navbar-right">
 					<span>${admin.accounts}</span> <i class="glyphicon glyphicon-log-in"
@@ -63,7 +63,7 @@ th {
 		</div>
 	</div>
 
-	<form action="/VideoSSM/speakerDeleteAll.do">
+	<form action="speakerDeleteAll.do">
 		<div class="container">
 			<button onclick="showAddPage()" type="button"
 				class="btn btn-info dropdown-toggle" data-toggle="dropdown"
@@ -94,12 +94,12 @@ th {
 						<tr>
 							<td><input type="checkbox" name="select" value="${i.id}"></td>
 							<td>${i.id}</td>
-							<td>${i.speakerName}</td>
-							<td>${i.speakerJob }</td>
-							<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">${i.speakerDesc}</td>
-							<td><a href="/VideoSSM/speakerUpdateShow.do?id=${i.id} ">✎</a></td>
+							<td>${i.speaker_name}</td>
+							<td>${i.speaker_job }</td>
+							<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">${i.speaker_desc}</td>
+							<td><a href="speakerUpdateShow.do?id=${i.id} ">✎</a></td>
 							<td><a href="javascript:void(0);" id="deletedID"
-								onclick="delSpeakerById('#deletedID','${i.id}','${i.speakerName}')">X</a></td>
+								onclick="delSpeakerById('#deletedID','${i.id}','${i.speaker_name}')">X</a></td>
 						</tr>
 					</c:forEach>
 					
@@ -130,7 +130,7 @@ th {
 			$("#ids").val(ids);
 		}
 		function showAddPage() {
-			location.href = "/VideoSSM/background/BackgroundSpeakerAdd.jsp";
+			location.href = "http://localhost:8080/background/BackgroundSpeakerAdd.jsp";
 		}
 		
 		function delSpeakerById(Obj, id, title) {
@@ -142,7 +142,7 @@ th {
 						var param = {
 							"id" : id
 						};
-						$.post("/VideoSSM/speakerDelete.do", param, function(
+						$.post("speakerDelete.do", param, function(
 								data) {
 							if (data == 'success') {
 								Confirm.show('温馨提示：', '删除成功');

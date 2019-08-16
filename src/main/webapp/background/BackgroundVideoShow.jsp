@@ -10,14 +10,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>智游教育</title>
 
-<link href="/VideoSSM/static/z/bootstrap/css/bootstrap.css"
+<link href="/VideoSb/static/z/bootstrap/css/bootstrap.css"
 	rel="stylesheet">
 
-<script src="/VideoSSM/static/js/jquery-1.js"></script>
-<script src="/VideoSSM/static/js/bootstrap.js"></script>
-<script src="/VideoSSM/static/js/confirm.js"></script>
-<script src="/VideoSSM/static/js/jquery.js"></script>
-<script src="/VideoSSM/static/js/message_cn.js"></script>
+<script src="/VideoSb/static/js/jquery-1.js"></script>
+<script src="/VideoSb/static/js/bootstrap.js"></script>
+<script src="/VideoSb/static/js/confirm.js"></script>
+<script src="/VideoSb/static/js/jquery.js"></script>
+<script src="/VideoSb/static/js/message_cn.js"></script>
 
 <style type="text/css">
 th {
@@ -42,9 +42,9 @@ display:inline-block;
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-9">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="/VideoSSM/videoShow.do">视频管理</a></li>
-					<li><a href="/VideoSSM/speakerShow.do">主讲人管理</a></li>
-					<li><a href="/VideoSSM/courseShow.do">课程管理</a></li>
+					<li><a href="http://localhost:8080/videoShow.do">视频管理</a></li>
+					<li class="active"> <a href="http://localhost:8080/speakerShow.do">主讲人管理</a></li>
+					<li ><a href="http://localhost:8080/showCourseH.do">课程管理</a></li>
 				</ul>
 				<p class="navbar-text navbar-right">
 					<span>${admin.accounts}</span> <i
@@ -70,7 +70,7 @@ display:inline-block;
 		</div>
 	</div>
 
-	<form action="/VideoSSM/videoDeleteAll.do" id="videoForm">
+	<form action="videoDeleteAll.do" id="videoForm">
 		<div class="container">
 			<button onclick="showAddPage()" type="button"
 				class="btn btn-info dropdown-toggle" data-toggle="dropdown"
@@ -83,13 +83,13 @@ display:inline-block;
 			<select name="speakerId" id="speaker" class="btn btn-primary">
 				<option value="0">请选择老师</option>	
 			           <c:forEach items="${speaker}" var="i" >
-				        <option value="${i.id}">${i.speakerName}</option>
+				        <option value="${i.id}">${i.speaker_name}</option>
 				       </c:forEach>
 			</select>
-			<select name="courseId" id="course" class="btn btn-primary">
+			<select name="course_id" id="course" class="btn btn-primary">
 				<option value="0">请选择课程</option>	
 			       <c:forEach items="${course}" var="j" >
-				        <option value="${j.id}">${j.courseTitle}</option>
+				        <option value="${j.id}">${j.course_title}</option>
 				    </c:forEach>
 			</select>
 			<button type="button" onclick="selectFor()" class="btn btn-info dropdown-toggle">查询</button>
@@ -117,19 +117,20 @@ display:inline-block;
 				<tbody>
 
 					<c:forEach items="${video}" var="k">
+					
 						<tr>
-							<td><input type="checkbox" name="select" value="${k.videoId}"></td>
-							<td>${k.videoId}</td>
+							<td><input type="checkbox" name="select" value="${k.video_id}"></td>
+							<td>${k.video_id}</td>
 							<td>${k.title}</td>
 							<td style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">${k.detail}</td>
-							<td>${k.speaker.speakerName}</td>
+							<td>${k.speaker.speaker_name}</td>
 							<td>${k.time}</td>
-							<td>${k.playNum}</td>
+							<td>${k.play_num}</td>
 							
 							
-							<td><a href="/VideoSSM/videoUpdateShow.do?id=${k.videoId} ">✎</a></td>
+							<td><a href="videoUpdateShow.do?id=${k.video_id} ">✎</a></td>
 							<td><a href="javascript:void(0);" id="del"
-								onclick="delVideoById('#del','${k.videoId}','${k.title}')">X</a></td>
+								onclick="delVideoById('#del','${k.video_id}','${k.title}')">X</a></td>
 					</c:forEach>
 					<tr>
 						<td colspan="9"><font>总共${count}条,当前第${page}页</font> <c:if
@@ -185,7 +186,7 @@ display:inline-block;
 			$("#ids").val(ids);
 		}
 		function showAddPage() {
-			location.href = "/VideoSSM/videoAddShow.do";
+			location.href = "videoAddShow.do";
 		}
 		function delVideoById(Obj, id, title) {
 
@@ -196,7 +197,7 @@ display:inline-block;
 						var param = {
 							"id" : id
 						};
-						$.post("/VideoSSM/videoDelete.do", param, function(
+						$.post("videoDelete.do", param, function(
 								data) {
 							if (data == 'success') {
 								

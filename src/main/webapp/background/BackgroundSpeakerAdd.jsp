@@ -15,7 +15,7 @@
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 <title>智游教育</title>
 
-<link href="/VideoSSM/static/z/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/VideoSb/static/z/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 <style type="text/css">
 .col-md-1 {
@@ -52,9 +52,9 @@ b {
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-9">
 				<ul class="nav navbar-nav">
-					<li><a href="/VideoSSM/videoShow.do">视频管理</a></li>
-					<li class="active"><a href="/VideoSSM/speakerShow.do">主讲人管理</a></li>
-					<li ><a href="/VideoSSM/courseShow.do">课程管理</a></li>
+					<li><a href="http://localhost:8080/videoShow.do">视频管理</a></li>
+					<li class="active"> <a href="http://localhost:8080/speakerShow.do">主讲人管理</a></li>
+					<li ><a href="http://localhost:8080/showCourseH.do">课程管理</a></li>
 				</ul>
 				<p class="navbar-text navbar-right">
 					<span>${admin.accounts}</span> <i class="glyphicon glyphicon-log-in"
@@ -82,33 +82,33 @@ b {
 
 	<div class="container" style="margin-top: 20px;">
 
-		<form id="infoForm" class="form-horizontal" method="post" action="/VideoSSM/speakerAdd.do">
+		<form id="infoForm" class="form-horizontal" method="post" action="speakerAdd.do">
 
 			<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">姓名</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="speakerName" id="speakerName"
+					<input class="form-control" name="speaker_name" id="speakerName"
 						placeholder="主讲人姓名" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">职位</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="speakerJob"  id="speakerJob"
+					<input class="form-control" name="speaker_job"  id="speakerJob"
 						placeholder="主讲人职位" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">头像地址</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="picUrl" id="picUrl"
+					<input class="form-control" name="pic_url" id="picUrl"
 						placeholder="主讲人头像" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">简介</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="speakerDesc" id="speakerDesc"
+					<input class="form-control" name="speaker_desc" id="speakerDesc"
 						placeholder="主讲人简介" type="text">
 				</div>
 			</div>
@@ -125,11 +125,11 @@ b {
 <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-	<script src="/VideoSSM/static/js/jquery-1.js"></script>
-	<script src="/VideoSSM/static/js/bootstrap.js"></script>
-	<script src="/VideoSSM/static/js/confirm.js"></script>
-	<script src="/VideoSSM/static/js/jquery.js"></script>
-	<script src="/VideoSSM/static/js/message_cn.js"></script>
+	<script src="/VideoSb/static/js/jquery-1.js"></script>
+	<script src="/VideoSb/static/js/bootstrap.js"></script>
+	<script src="/VideoSb/static/js/confirm.js"></script>
+	<script src="/VideoSb/static/js/jquery.js"></script>
+	<script src="/VideoSb/static/js/message_cn.js"></script>
 
 
 
