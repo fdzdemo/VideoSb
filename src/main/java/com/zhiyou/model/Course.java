@@ -1,10 +1,42 @@
 package com.zhiyou.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course {
 	private int id;
 	private String course_title;
 	private String course_desc;
 	private int subject_id;
+	private List<Video> videos =new ArrayList<Video>();
+	private Subject subject;
+	public Course(int id, String course_title, String course_desc, int subject_id, List<Video> videos,
+			Subject subject) {
+		super();
+		this.id = id;
+		this.course_title = course_title;
+		this.course_desc = course_desc;
+		this.subject_id = subject_id;
+		this.videos = videos;
+		this.subject = subject;
+	}
+
+	public List<Video> getVideos() {
+		return videos;
+	}
+
+	public void setVideos(List<Video> videos) {
+		this.videos = videos;
+	}
+
+	public Subject getSubject() {
+		return subject;
+	}
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+
 	public Course() {
 		super();
 		// TODO Auto-generated constructor stub

@@ -52,7 +52,7 @@
 
 
 
-				</a> <a href="/VideoSSM/loginOut.do">退出</a>
+				</a> <a href="/VideoSb/loginOut.do">退出</a>
 			</div>
 		</div>
 	</menu>
@@ -64,11 +64,11 @@
 		<div id="profile_tab">
 			<ul class="profile_tab_header f_left clearfix">
 				<ul class="profile_tab_header f_left clearfix">
-					<li><a href="/VideoSSM/userUpadteShow.do">更改资料</a></li>
+					<li><a href="/VideoSb/userUpadteShow.do">更改资料</a></li>
 					<li class="profile_tab_line">|</li>
-					<li><a href="/VideoSSM/foreground/AvatarUpload.jsp">更改头像</a></li>
+					<li><a href="/VideoSb/foreground/AvatarUpload.jsp">更改头像</a></li>
 					<li class="profile_tab_line">|</li>
-					<li><a href="/VideoSSM/foreground/PasswordUpdate.jsp">密码安全</a></li>
+					<li><a href="/VideoSb/foreground/PasswordUpdate.jsp">密码安全</a></li>
 				</ul>
 			</ul>
 			<div class="proflle_tab_body">
@@ -84,7 +84,7 @@
 						<p style="text-align: center;">当前头像</p>
 					</div>
 					<div class="profile_ifo_area">
-						<form id="upload_form" action="/VideoSSM/uploadAvatar.do"
+						<form id="upload_form" action="/VideoSb/uploadAvatar.do"
 							enctype="multipart/form-data" method="post">
 							<!-- hidden crop params -->
 
@@ -121,10 +121,10 @@
 	<footer>
 	<div class="container">
 		<ul>
-			<li><img src="/VideoSSM/static/z/footer_logo.png" alt=""
+			<li><img src="/VideoSb/static/z/footer_logo.png" alt=""
 				id="foot_logo"></li>
 			<li>版权所有：智游3G教育 ©&nbsp;www.zhiyou100.com</li>
-			<li><img src="/VideoSSM/static/z//a.png" alt="" id="wxgzh"></li>
+			<li><img src="/VideoSb/static/z//a.png" alt="" id="wxgzh"></li>
 		</ul>
 	</div>
 	</footer>
@@ -132,11 +132,11 @@
 
 
 
-	<script src="/VideoSSM/static/z/jquery-1.js"></script>
-	<script src="/VideoSSM/static/z/gVerify.js"></script>
-	<script src="/VideoSSM/static/z/index.js"></script>
+	<script src="/VideoSb/static/z/jquery-1.js"></script>
+	<script src="/VideoSb/static/z/gVerify.js"></script>
+	<script src="/VideoSb/static/z/index.js"></script>
 
-	<script src="/VideoSSM/static/js/jquery.js"></script>
-	<script src="/VideoSSM/static/js/Jcrop_upload.js"></script>
+	<script src="/VideoSb/static/js/jquery.js"></script>
+	<script src="/VideoSb/static/js/Jcrop_upload.js"></script>
 </body>
 </html>

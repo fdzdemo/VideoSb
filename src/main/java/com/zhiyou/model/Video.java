@@ -79,12 +79,6 @@ public class Video {
 	public void setPlay_num(int play_num) {
 		this.play_num = play_num;
 	}
-	public Subject getSubject() {
-		return subject;
-	}
-	public void setSubject(Subject subject) {
-		this.subject = subject;
-	}
 	public Video() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -101,25 +95,6 @@ public class Video {
 		this.video_url = video_url;
 		this.image_url = image_url;
 		this.play_num = play_num;
-	}
-	
-
-	
-	public Video(int video_id, String title, String detail, int time, int speaker_id, int course_id, String video_url,
-			String image_url, int play_num, Speaker speaker, Course course, Subject subject) {
-		super();
-		this.video_id = video_id;
-		this.title = title;
-		this.detail = detail;
-		this.time = time;
-		this.speaker_id = speaker_id;
-		this.course_id = course_id;
-		this.video_url = video_url;
-		this.image_url = image_url;
-		this.play_num = play_num;
-		this.speaker = speaker;
-		this.course = course;
-		this.subject = subject;
 	}
 	@Override
 	public String toString() {

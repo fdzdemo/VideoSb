@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.zhiyou.dao")
+@MapperScan("com.zhiyou.dao")//�Զ�ɨ��·�������нӿ�
 public class VideoSpringbootApplication {
 
 	public static void main(String[] args) {
