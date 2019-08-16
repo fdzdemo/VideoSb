@@ -8,6 +8,7 @@ public class Course {
 	private String course_title;
 	private String course_desc;
 	private int subject_id;
+	
 	private List<Video> videos =new ArrayList<Video>();
 	private Subject subject;
 	public Course(int id, String course_title, String course_desc, int subject_id, List<Video> videos,
