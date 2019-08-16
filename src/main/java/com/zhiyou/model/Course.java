@@ -9,6 +9,9 @@ public class Course {
 	private String course_desc;
 	private int subject_id;
 	private int subject_iddd;
+	private Subject subject;
+	private List<Video> videos =new ArrayList<Video>();
+	
 	public Course(int id, String course_title, String course_desc, int subject_id, List<Video> videos,
 			Subject subject) {
 		super();
@@ -20,8 +23,8 @@ public class Course {
 		this.subject = subject;
 	}
 	
-	private List<Video> videos =new ArrayList<Video>();
-	private Subject subject;
+
+	
 	public List<Video> getVideos() {
 		return videos;
 	}
@@ -37,6 +40,7 @@ public class Course {
 	public void setSubject(Subject subject) {
 		this.subject = subject;
 	}
+
 
 	public Course() {
 		super();
