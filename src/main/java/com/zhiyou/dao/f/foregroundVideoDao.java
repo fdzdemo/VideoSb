@@ -1,7 +1,9 @@
 package com.zhiyou.dao.f;
 
-import com.zhiyou.model.Video;
+import org.springframework.stereotype.Repository;
 
+import com.zhiyou.model.Video;
+@Repository
 public interface foregroundVideoDao {
 
 	Video selectById (Integer id);

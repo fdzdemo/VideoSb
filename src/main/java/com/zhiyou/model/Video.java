@@ -12,7 +12,6 @@ public class Video {
 	private int play_num;
 	private Speaker speaker;
 	private Course course;
-	private Subject subject;
 	public Speaker getSpeaker() {
 		return speaker;
 	}

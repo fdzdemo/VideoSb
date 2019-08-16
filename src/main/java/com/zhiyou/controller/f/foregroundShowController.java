@@ -21,13 +21,13 @@ public class foregroundShowController {
 	foregroundShowService show;
 	@Autowired
 	foregroundVideoService vs;
-	//¿Î³ÌÌôÑ¡
+	//ï¿½Î³ï¿½ï¿½ï¿½Ñ¡
 	@RequestMapping("/courseWithVideoAndSubject.do")
 	public String CourseWithVideoAndSubject(String subjectId,HttpServletRequest req) {
 		List<Course> list = show.selectAllById(Integer.valueOf(subjectId));
 		System.out.println(list);
 		if(list.isEmpty()) {
-			req.setAttribute("msg", "¿ª·¢ÖÐ£¬ÇëÆÚ´ý£¡");
+			req.setAttribute("msg", "ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½");
 			return"/index";
 			
 		}
