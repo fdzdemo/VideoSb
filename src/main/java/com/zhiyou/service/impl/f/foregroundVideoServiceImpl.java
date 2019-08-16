@@ -1,4 +1,4 @@
-package com.zhiyou.service.Impl.f;
+package com.zhiyou.service.impl.f;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -19,9 +19,9 @@
 	content="Web前端视频教程,大数据视频教程,HTML5视频教程,UI视频教程,PHP视频教程,java视频教程,python基础教程">
 <meta name="description"
 	content="智游教育在线课程视频,为您提供java,python,HTML5,UI,PHP,大数据等学科经典视频教程在线浏览学习,精细化知识点解析,深入浅出,想学不会都难,智游教育,学习成就梦想！">
-<link rel="stylesheet" href="/VideoSSM/static/z/base.css">
-<link rel="stylesheet" href="/VideoSSM/static/z/profile.css">
-<link rel="stylesheet" href="/VideoSSM/static/js/jquery.css">
+<link rel="stylesheet" href="/VideoSb/static/z/base.css">
+<link rel="stylesheet" href="/VideoSb/static/z/profile.css">
+<link rel="stylesheet" href="/VideoSb/static/js/jquery.css">
 <title>在线公开课-智游教育|java|大数据|HTML5|python|UI|PHP视频教程</title>
 </head>
 
@@ -32,7 +32,7 @@
 
 	<header>
 	<div class="container top_bar clearfix">
-		<img src="/VideoSSM/static/z/logo.png" alt="智游">
+		<img src="/VideoSb/static/z/logo.png" alt="智游">
 		<div id="tele">
 			<span>4006-371-555</span> <span>0371-88888598</span>
 		</div>
@@ -40,10 +40,10 @@
 	<menu>
 		<div class="container clearfix">
 			<ul class="clearfix f_left">
-				<li><a href="/VideoSSM/index.jsp">首页</a></li>
+				<li><a href="/VideoSb/index.jsp">首页</a></li>
 
 				<li class="menu_active"><a
-					href="/VideoSSM/foreground/PersonalCenter.jsp">个人中心</a></li>
+					href="/VideoSb/foreground/PersonalCenter.jsp">个人中心</a></li>
 			</ul>
 
 			<div id="user_bar">
