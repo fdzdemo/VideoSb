@@ -37,13 +37,13 @@
 			<ul class="clearfix f_left">
 				<li><a href="/VideoSb/index.jsp">首页</a></li>
 				
-				<li class="menu_active"><a href="/VideoSb/foreground/PersonalCenter.jsp">个人中心</a></li>
+				<li class="menu_active"><a href="/VideoSb/selectUser.do?accounts=${user.accounts }&password=${user.password}">个人中心</a></li>
 			</ul>
 			
 			<div id="user_bar">
 				<a>
 						
-						<img id="avatar" src="${user.imgurl }" alt="" "="">
+						<img id="avatar" src="${user.imgurl}" alt="">
 						
 						
 					
@@ -62,9 +62,9 @@
                 <ul class="profile_tab_header f_left clearfix">
                     <li><a href="/VideoSb/userUpadteShow.do">更改资料</a></li>
                     <li class="profile_tab_line">|</li>
-                    <li><a href="/VideoSb/foreground/AvatarUpload.jsp">更改头像</a></li>
+                    <li><a href="/VideoSb/avatarUpload.do">更改头像</a></li>
                     <li class="profile_tab_line">|</li>
-                    <li><a href="/VideoSb/foreground/PasswordUpdate.jsp">密码安全</a></li>
+                    <li><a href="/VideoSb/passwordUpdate.do">密码安全</a></li>
                 </ul>
                 <div class="proflle_tab_body">
                     <div class="proflle_tab_workplace clearfix">
@@ -79,7 +79,7 @@
                         </div>
                       
                         <div class="profile_ifo_area">
-                            <form action="/VideoSb/passwordUpdate.do" method="post">
+                            <form action="/VideoSb/passwordUpdate1.do" method="post">
                                 <div class="form_group">
                                     <span class="dd">旧　密　码：</span>
                                     <input id="originalPassword" type="password" name="originalPassword"><span id="oldMsg"></span>
@@ -117,16 +117,44 @@
 </footer>
 
  <script type="text/javascript" src="/VideoSb/js/jquery-3.4.1.js"></script>
+ <script >
+ 	//在页面加载完成后
+ 	$(function(){
+ 		//给指定username绑定blur事件
+ 		$("#originalPassword").blur(function(){
+ 			//获取username文本输入框的值
+ 			var password=$(this).val();
+ 			//发送ajax请求
+ 			$.get("findUsername.do",{password:password},function(data){
+ 				//判断userExsit的键是否存在
+ 				var span=$("#oldMsg");
+ 				if(data.userExsit){
+ 					span.css("color","green");
+ 					span.html(data.msg);
+ 				}else{
+ 					
+ 					span.css("color","red");
+ 					span.html(data.msg);
+ 				}
+ 			},"json");
+ 			
+ 		});
+ 	});
+ 
+ </script>
+ 
+ 
+ 
  <script type="text/javascript">
  $(function(){
 		$("#subBtn").attr('disabled',true);
-		$("#originalPassword").blur(originalPasswordCheck);
+		//$("#originalPassword").blur(originalPasswordCheck);
 		$("#newPassword").blur(rePasswordCheck);
 		$("#rePassword").blur(rePasswordCheck);
 		$("#subBtn").click(rePasswordCheck);
 		$("#subBtn").click(originalPasswordCheck);
 	});
-	function originalPasswordCheck(){
+/* 	function originalPasswordCheck(){
     
 		$.ajax({
 		url:"${pageContext.request.contextPath}/originalPasswordCheck.do",
@@ -146,7 +174,7 @@
 		}
 	});
 
-	}
+	} */
 	function rePasswordCheck() {
 		$.ajax({
 			url:"${pageContext.request.contextPath}/rePasswordCheck.do",

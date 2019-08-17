@@ -44,7 +44,7 @@
 			<ul class="clearfix f_left">
 				<li><a href="/VideoSb/index.jsp">首页</a></li>
 
-				<li class="menu_active"><a href="/VideoSb/foreground/PersonalCenter.jsp">个人中心</a></li>
+				<li class="menu_active"><a href="/VideoSb/selectUser.do?accounts=${user.accounts }&password=${user.password}">个人中心</a></li>
 			</ul>
 
 			<div id="user_bar">
@@ -66,9 +66,9 @@
 			<ul class="profile_tab_header f_left clearfix">
 				<li><a href="/VideoSb/userUpadteShow.do">更改资料</a></li>
 				<li class="profile_tab_line">|</li>
-				<li><a href="/VideoSb/foreground/AvatarUpload.jsp">更改头像</a></li>
+				<li><a href="/VideoSb/avatarUpload.do">更改头像</a></li>
 				<li class="profile_tab_line">|</li>
-				<li><a href="/VideoSb/foreground/PasswordUpdate.jsp">密码安全</a></li>
+				<li><a href="/VideoSb/passwordUpdate.do">密码安全</a></li>
 			</ul>
 			<div class="proflle_tab_body">
 				<div class="proflle_tab_workplace clearfix">
@@ -89,10 +89,21 @@
 							</div>
 							<div class="form_group">
 								<span class="dd">性 别：</span> 
-								<input id="man" type="radio" name="sex" value="man"><label
+								<c:choose>
+									<c:when test="${user.sex=='man'}">
+									<input id="man" type="radio" name="sex" value="man" checked="checked"><label
 									for="man">男</label> 
 							    <input id="woman" type="radio" name="sex" value="woman"><label
 									for="woman">女</label>
+									</c:when>
+								<c:otherwise>
+									<input id="man" type="radio" name="sex" value="man" ><label
+									for="man">男</label> 
+							    <input id="woman" type="radio" name="sex" value="woman" checked="checked"><label
+									for="woman">女</label>
+								</c:otherwise>
+								</c:choose>
+								
 
 
 
@@ -382,7 +393,7 @@
 		//省市联动
 		
 		$(function() {
-	
+
 			$("#prov").change(
 							function() {
 								$("#citySelectOption").empty();
